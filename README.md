@@ -1,2 +1,2 @@
 # dotfiles
-diferent linux dotfiles
+different linux dotfiles
