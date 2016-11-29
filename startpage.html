@@ -1,6 +1,7 @@
 <!doctype html>
-
 <script>
+// Credit goes to https://github.com/cadejscroggins/tilde for the original html. I've just changed some colors/links
+
   'use strict';
 
   var config = {
@@ -14,6 +15,7 @@
         { key: 'y', name: 'YouTube', url: 'https://www.youtube.com', search: '/results?search_query=' },
         { key: 's', name: 'Spotify', url: 'https://play.spotify.com', search: '/search/' },
         { key: 'n', name: 'Netflix', url: 'https://www.netflix.com', search: '/search/' },
+        { key: 'p', name: 'Plex', url: 'plexlocalurl', search: '/search/' },
         { key: 'Y', name: 'YTS', url: 'https://yts.ag', search: '/browse-movies/' },
       ] },
       { name: "News", commands: [
@@ -26,12 +28,11 @@
       ] },
       { name: "Shops", commands: [
         { key: 'a', name: 'Amazon', url: 'https://www.amazon.com' },
-        { key: 'I', name: 'Instagram', url: 'https://www.instagram.com' },
-        { key: 't', name: 'Twitter', url: 'https://twitter.com', search: '/search?q=' },
       ] },
       { name: "Tools", commands: [
         { key: 'g', name: 'GitHub', url: 'https://github.com', search: '/search?q=' },
         { key: 'm', name: 'GoogleMaps', url: 'https://www.google.ch/maps', search: '/search/' },
+        { key: 'l', name: 'Leanote', url: 'leanoteurl', search: '/search/' },
       ] },
     ],
 
