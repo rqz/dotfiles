@@ -27,4 +27,11 @@ fi
 HISTFILE=~/.histfile
 HISTSIZE=1000
 SAVEHIST=1000
+# Appends every command to the history file once it is executed
+setopt inc_append_history
+# Reloads the history whenever you use it
+setopt share_history
+
+#keychain 
+eval `keychain --clear --agents ssh --eval id_ed25519_git`
 #EOF

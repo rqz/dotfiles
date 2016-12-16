@@ -49,3 +49,6 @@ syntax on
 set showcmd
 
 colorscheme badwolf
+
+"binds Esc to fj 
+:imap fj <Esc> 
