@@ -37,7 +37,10 @@ eval `keychain --clear --agents ssh --eval id_ed25519_git`
 
 # Aliases
 alias v='vim'
-alias upadte='yaourt -Suya --noconfirm'
+alias c='clear'
+alias df='df -H'
+alias du='du -ch'
+alias update='yaourt -Suya --noconfirm'
 alias con='vim ~/.i3/config'
 alias mirrors='sudo pacman-mirrors -g'
 #EOF
