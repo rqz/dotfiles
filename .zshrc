@@ -32,6 +32,12 @@ setopt inc_append_history
 # Reloads the history whenever you use it
 setopt share_history
 
-#keychain 
+# Keychain 
 eval `keychain --clear --agents ssh --eval id_ed25519_git`
+
+# Aliases
+alias v='vim'
+alias upadte='yaourt -Suya --noconfirm'
+alias con='vim ~/.i3/config'
+alias mirrors='sudo pacman-mirrors -g'
 #EOF
