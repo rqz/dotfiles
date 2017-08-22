@@ -14,6 +14,7 @@ call plug#begin('~/.vim/plugged')
 
 Plug 'Valloric/YouCompleteMe', { 'do': './install.py' }
 Plug 'scrooloose/nerdtree'
+Plug 'Xuyuanp/nerdtree-git-plugin'
 Plug 'scrooloose/syntastic'
 Plug 'nvie/vim-flake8'
 Plug 'plasticboy/vim-markdown'
@@ -25,7 +26,8 @@ Plug 'vim-scripts/indentpython.vim'
 call plug#end()
 
 "ignore files in nerdtree
-let NERDTreeIgnore=['\.pyc$', '\~$']
+"let NERDTreeIgnore=['\.pyc$', '\~$']
+map <C-n> :NERDTreeToggle<CR>
 
 "enable suntax and PEP8
 let python_highlight_all=1
@@ -59,6 +61,7 @@ au BufNewFile,BufRead *.py
     \ set fileformat=unix
 
 "show bad whitespaces
+highlight BadWhitespace ctermbg=red guibg=red
 au BufNewFile,BufRead *.py,*.pyw,*.c,*.h match BadWhitespace /\s\+$/
 
 "make backspaces more powerfull
