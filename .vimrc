@@ -15,6 +15,7 @@ call plug#begin('~/.vim/plugged')
 Plug 'Valloric/YouCompleteMe', { 'do': './install.py' }
 Plug 'scrooloose/nerdtree'
 Plug 'Xuyuanp/nerdtree-git-plugin'
+Plug 'ctrlpvim/ctrlp.vim'
 Plug 'scrooloose/syntastic'
 Plug 'nvie/vim-flake8'
 Plug 'plasticboy/vim-markdown'
@@ -26,7 +27,7 @@ Plug 'vim-scripts/indentpython.vim'
 call plug#end()
 
 "ignore files in nerdtree
-"let NERDTreeIgnore=['\.pyc$', '\~$']
+let NERDTreeIgnore=['\.pyc$', '\~$']
 map <C-n> :NERDTreeToggle<CR>
 
 "enable suntax and PEP8
