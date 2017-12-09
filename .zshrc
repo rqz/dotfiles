@@ -27,20 +27,25 @@ fi
 HISTFILE=~/.histfile
 HISTSIZE=1000
 SAVEHIST=1000
+# gPodder download directory
+GPODDER_DOWNLOAD_DIR=~/Documents/sharedVM/podcasts
 # Appends every command to the history file once it is executed
 setopt inc_append_history
 # Reloads the history whenever you use it
 setopt share_history
 
 # Keychain 
-eval `keychain --clear --agents ssh --eval id_ed25519_git`
+#eval `keychain --clear --agents ssh --eval id_ed25519_git`
 
 # Aliases
 alias v='vim'
 alias c='clear'
+alias q='exit'
 alias df='df -H'
 alias du='du -ch'
 alias update='yaourt -Suya --noconfirm'
-alias con='vim ~/.i3/config'
-alias mirrors='sudo pacman-mirrors -g'
+alias ci3='vim ~/.i3/config'
+alias czsh='vim ~/.zshrc'
+alias cranger='vim ~/.config/ranger/rc.conf'
+#alias mirrors='sudo pacman-mirrors -g'
 #EOF
