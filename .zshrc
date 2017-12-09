@@ -35,7 +35,7 @@ setopt inc_append_history
 setopt share_history
 
 # Keychain 
-#eval `keychain --clear --agents ssh --eval id_ed25519_git`
+eval `keychain --clear --agents ssh --eval id_ed25519_git`
 
 # Aliases
 alias v='vim'
