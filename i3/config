@@ -1,4 +1,4 @@
-# i3 config file (v4)
+# i3 config file (v4), changed to suits my needs
 # Please see http://i3wm.org/docs/userguide.html for a complete reference!
 
 # Set mod key (Mod1=<Alt>, Mod4=<Super>)
@@ -21,7 +21,7 @@ bindsym $mod+n border normal
 
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
-font xft:Noto Sans 10
+font xft:RobotoMono Regular 10
 
 # Use Mouse+$mod to drag floating windows
 floating_modifier $mod
@@ -49,10 +49,6 @@ bindsym $mod+Ctrl+m exec terminal -e 'alsamixer'
 #bindsym $mod+Ctrl+m exec pavucontrol
 
 ################################################################################################
-
-# Screen brightness controls
-# bindsym XF86MonBrightnessUp exec "xbacklight -inc 10; notify-send 'brightness up'"
-# bindsym XF86MonBrightnessDown exec "xbacklight -dec 10; notify-send 'brightness down'"
 
 # Start Applications
 bindsym $mod+Ctrl+b exec terminal -e 'bmenu'
@@ -137,9 +133,9 @@ bindsym $mod+Ctrl+Left workspace prev
 # to display names or symbols instead of plain workspace numbers you can use
 # something like: set $ws1 1:mail
 #                 set $ws2 2:
-set $ws1 1
-set $ws2 2
-set $ws3 3
+set $ws1 1:
+set $ws2 2:
+set $ws3 3:
 set $ws4 4
 set $ws5 5
 set $ws6 6
@@ -277,10 +273,11 @@ exec --no-startup-id xfce4-power-manager
 exec --no-startup-id pamac-tray
 # exec --no-startup-id blueman
 # exec_always --no-startup-id sbxkb
-exec --no-startup-id start_conky_maia
+# exec --no-startup-id start_conky_maia
 # exec --no-startup-id start_conky_green
 exec_always --no-startup-id ff-theme-util
 exec_always --no-startup-id fix_xcursor
+exec_always --no-startup-id sh ~/.fehbg 
 
 # Color palette used for the terminal ( ~/.extend.Xresources file )
 # Colors are gathered based on the documentation:
@@ -341,7 +338,7 @@ set $i3_color17         #0c0c0c
 
 # Start i3bar to display a workspace bar (plus the system information i3status if available)
 bar {
-	status_command i3status
+	status_command i3blocks -c ~/.dotfiles/i3/i3blocks.conf
 	position top
 
 ## please set your primary output first. Example: 'xrandr --output eDP1 --primary'
@@ -350,14 +347,16 @@ bar {
 
 	bindsym button4 nop
 	bindsym button5 nop
-	font xft:Noto Sans 9 
-	strip_workspace_numbers yes
+	font xft:Roboto Regular 9 
+	strip_workspace_numbers no
+#	separator_symbol " / "
 
 	colors {
 #       background $transparent
         background $i3_background
         statusline $i3_text
-        separator  $i3_separator
+        #separator  $i3_separator
+        separator  $i3_text
 
 #                                  border  backgr. text
         focused_workspace   $i3_color1  $i3_color4  $i3_text
