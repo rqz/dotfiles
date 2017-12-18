@@ -277,6 +277,7 @@ exec --no-startup-id pamac-tray
 # exec --no-startup-id start_conky_green
 exec_always --no-startup-id ff-theme-util
 exec_always --no-startup-id fix_xcursor
+# restore last background
 exec_always --no-startup-id sh ~/.fehbg 
 
 # Color palette used for the terminal ( ~/.extend.Xresources file )

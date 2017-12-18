@@ -48,6 +48,11 @@ map <leader>g  :YcmCompleter GoToDefinitionElseDeclaration<CR>
 "let g:vim_markdown_folding_disabled = 1
 "let g:vim_markdown_frontmatter = 1
 
+"vim-instant-markdown options
+let g:instant_markdown_slow=1
+let g:instant_markdown_autostart=0
+map <C-m> :InstantMarkdownPreview<CR>
+
 "load flietype-specific indent file and turn on filetype detection
 filetype indent on
 

@@ -35,7 +35,7 @@ setopt inc_append_history
 setopt share_history
 
 # Keychain 
-eval `keychain --clear --agents ssh --eval id_ed25519_git`
+eval `keychain -q --agents ssh --eval id_ed25519_git`
 
 # Aliases
 alias v='vim'
@@ -46,6 +46,7 @@ alias du='du -ch'
 alias update='yaourt -Suya --noconfirm'
 alias ci3='vim ~/.i3/config'
 alias czsh='vim ~/.zshrc'
+alias cvim='vim ~/.vimrc'
 alias cranger='vim ~/.config/ranger/rc.conf'
 #alias mirrors='sudo pacman-mirrors -g'
 #EOF
