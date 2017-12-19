@@ -27,8 +27,7 @@ fi
 HISTFILE=~/.histfile
 HISTSIZE=1000
 SAVEHIST=1000
-# gPodder download directory
-GPODDER_DOWNLOAD_DIR=~/Documents/sharedVM/podcasts
+
 # Appends every command to the history file once it is executed
 setopt inc_append_history
 # Reloads the history whenever you use it
@@ -47,6 +46,7 @@ alias update='yaourt -Suya --noconfirm'
 alias ci3='vim ~/.i3/config'
 alias czsh='vim ~/.zshrc'
 alias cvim='vim ~/.vimrc'
+alias cxres='vim ~/.extend.Xresources'
 alias cranger='vim ~/.config/ranger/rc.conf'
 #alias mirrors='sudo pacman-mirrors -g'
 #EOF
