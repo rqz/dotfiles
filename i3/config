@@ -42,7 +42,7 @@ bindsym $mod+z exec --no-startup-id morc_menu
 ## sound-section - DO NOT EDIT if you wish to automatically upgrade Alsa -> Pulseaudio later! ##
 ################################################################################################
 
-exec --no-startup-id volumeicon
+#exec --no-startup-id volumeicon
 bindsym $mod+Ctrl+m exec terminal -e 'alsamixer'
 #exec --no-startup-id pulseaudio
 #exec --no-startup-id pa-applet
@@ -270,15 +270,15 @@ exec --no-startup-id nitrogen --restore; sleep 1; compton -b
 #exec --no-startup-id manjaro-hello
 exec --no-startup-id nm-applet
 exec --no-startup-id xfce4-power-manager
-exec --no-startup-id pamac-tray
+# exec --no-startup-id pamac-tray
 # exec --no-startup-id blueman
 # exec_always --no-startup-id sbxkb
-# exec --no-startup-id start_conky_maia
-# exec --no-startup-id start_conky_green
 exec_always --no-startup-id ff-theme-util
 exec_always --no-startup-id fix_xcursor
 # restore last background
 exec_always --no-startup-id sh ~/.fehbg 
+# launch polybar
+exec_always --no-startup-id $HOME/.config/polybar/launch.sh
 
 # Color palette used for the terminal ( ~/.extend.Xresources file )
 # Colors are gathered based on the documentation:
@@ -343,34 +343,34 @@ set $i3_color16         #ffffff
 set $i3_color17         #0c0c0c
 
 # Start i3bar to display a workspace bar (plus the system information i3status if available)
-bar {
-	status_command i3blocks -c ~/.dotfiles/i3/i3blocks.conf
-	position top
-
-## please set your primary output first. Example: 'xrandr --output eDP1 --primary'
-#	tray_output primary
-#	tray_output eDP1
-
-	bindsym button4 nop
-	bindsym button5 nop
-	font xft:Roboto Regular 9 
-	strip_workspace_numbers no
-#	separator_symbol " / "
-
-	colors {
-#       background $transparent
-        background $i3_background
-        statusline $term_color13
-        #separator  $i3_separator
-        separator  $term_color5
-
-#                                  border  backgr. text
-        focused_workspace   $i3_color1  $i3_color4  $i3_text
-        active_workspace    $i3_color2  $i3_color3  $i3_color5
-        inactive_workspace  $i3_color2  $i3_color3  $i3_color6
-        urgent_workspace    $i3_color4  $i3_color5  $i3_color7
-    }
-}
+#bar {
+#	status_command i3blocks -c ~/.dotfiles/i3/i3blocks.conf
+#	position top
+#
+### please set your primary output first. Example: 'xrandr --output eDP1 --primary'
+##	tray_output primary
+##	tray_output eDP1
+#
+#	bindsym button4 nop
+#	bindsym button5 nop
+#	font xft:Roboto Regular 9 
+#	strip_workspace_numbers no
+##	separator_symbol " / "
+#
+#	colors {
+##       background $transparent
+#        background $i3_background
+#        statusline $term_color13
+#        #separator  $i3_separator
+#        separator  $term_color5
+#
+##                                  border  backgr. text
+#        focused_workspace   $i3_color4  $i3_color4  $i3_text
+#        active_workspace    $i3_color11  $i3_color3  $term_color13
+#        inactive_workspace  $i3_color4  $i3_color3  $i3_color6
+#        urgent_workspace    $i3_color7  $i3_color5  $i3_color7
+#    }
+#}
 
 # hide/unhide i3status bar
 bindsym $mod+m bar mode toggle
