@@ -48,5 +48,6 @@ alias czsh='vim ~/.zshrc'
 alias cvim='vim ~/.vimrc'
 alias cxres='vim ~/.extend.Xresources'
 alias cranger='vim ~/.config/ranger/rc.conf'
+alias cpolybar='vim ~/.config/polybar/config'
 #alias mirrors='sudo pacman-mirrors -g'
 #EOF
